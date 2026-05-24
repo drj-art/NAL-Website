@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>What is NeuroAdaptive Leadership?</title>
+<meta name="description" content="A brain-based approach to leading with clarity, confidence, and adaptability in an era of disruption. Built around the A.D.A.P.T. model by Dr. Jason Jones." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+<style>
+  /* Page-specific touches */
+  .pullquote {
+    background: var(--off-white);
+    border-left: 3px solid var(--gold);
+    padding: 32px 36px;
+    border-radius: 0 var(--r-lg) var(--r-lg) 0;
+    margin: 32px 0;
+    max-width: 760px;
+  }
+  .pullquote p {
+    font-size: 22px;
+    line-height: 1.4;
+    color: var(--navy-deep);
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .pullquote cite {
+    display: block;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    margin-top: 14px;
+  }
+  .on-dark .pullquote {
+    background: rgba(255,255,255,0.04);
+    border-left-color: var(--gold);
+  }
+  .on-dark .pullquote p { color: var(--white); }
+  .on-dark .pullquote cite { color: var(--gold); }
+
+  /* A.D.A.P.T. model — 5-step rail */
+  .adapt {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .adapt-step {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--r-xl);
+    padding: 28px 24px;
+    position: relative;
+    transition: transform 250ms ease, box-shadow 300ms ease, border-color 300ms ease;
+    display: flex;
+    flex-direction: column;
+  }
+  .adapt-step:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card);
+    border-color: rgba(245, 166, 35, 0.5);
+  }
+  .adapt-step .letter {
+    font-size: 56px;
+    line-height: 1;
+    font-weight: 800;
+    color: var(--gold);
+    letter-spacing: -0.04em;
+    margin-bottom: 14px;
+  }
+  .adapt-step .letter sup {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--slate);
+    letter-spacing: 0.14em;
+    margin-left: 6px;
+    vertical-align: top;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  .adapt-step h4 {
+    color: var(--navy-deep);
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.25;
+  }
+  .adapt-step p {
+    color: var(--slate-dark);
+    font-size: 13.5px;
+    line-height: 1.6;
+    margin: 0;
+    flex: 1;
+  }
+  @media (max-width: 1024px) { .adapt { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .adapt { grid-template-columns: 1fr; } }
+
+  /* Compare table — Traditional vs NeuroAdaptive */
+  .compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .compare-col {
+    border-radius: var(--r-xl);
+    padding: 28px 28px 24px;
+    border: 1px solid var(--border);
+  }
+  .compare-col.trad {
+    background: var(--white);
+    color: var(--slate-dark);
+  }
+  .compare-col.nal {
+    background: linear-gradient(160deg, var(--navy-deep), var(--navy-mid));
+    color: var(--white);
+    border-color: rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+  }
+  .compare-col.nal::after {
+    content: "";
+    position: absolute;
+    width: 280px; height: 280px;
+    right: -100px; top: -100px;
+    background: radial-gradient(circle, rgba(245,166,35,0.25), transparent 60%);
+    pointer-events: none;
+  }
+  .compare-col h4 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-bottom: 18px;
+  }
+  .compare-col.trad h4 { color: var(--slate); }
+  .compare-col.nal h4 { color: var(--gold); }
+  .compare-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; position: relative; z-index: 2; }
+  .compare-col li {
+    display: flex; gap: 12px; align-items: flex-start;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .compare-col li .icon {
+    flex-shrink: 0;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 12px;
+    font-weight: 800;
+    margin-top: 2px;
+  }
+  .compare-col.trad li .icon { background: rgba(10,22,40,0.08); color: var(--slate); }
+  .compare-col.nal li .icon { background: var(--gold); color: var(--navy-deep); }
+  @media (max-width: 760px) { .compare { grid-template-columns: 1fr; } }
+
+  /* Habit list */
+  .habits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .habit {
+    padding: 22px 22px;
+    border-radius: var(--r-lg);
+    background: var(--white);
+    border: 1px solid var(--border);
+  }
+  .habit .tag {
+    display: inline-block;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 11px;
+    color: var(--gold-dark);
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+  .habit h5 { margin: 0 0 4px; font-size: 16px; color: var(--navy-deep); font-weight: 700; }
+  .habit p { margin: 0; font-size: 13.5px; color: var(--slate-dark); line-height: 1.55; }
+  @media (max-width: 860px) { .habits { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .habits { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="index.html">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg></span>
+      <span><span class="gold-N">N</span>euro<span class="gold-A">A</span>daptive&nbsp;Leadership</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+      <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+
+    <ul class="nav-links" id="primary-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="what-is-neuroadaptive-leadership.html" class="active">What is NAL</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="nli.html">NLI</a></li>
+      <li><a href="missionbuilder.html">MissionBuilder</a></li>
+      <li class="always-show nav-cta"><a class="btn btn-primary btn-sm" href="index.html#preorder">Pre-order <span class="arrow">→</span></a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero dot-grid" data-screen-label="What-is Hero">
+  <div class="container" style="position: relative; z-index: 2;">
+    <div style="max-width: 820px;">
+      <span class="eyebrow">The Approach</span>
+      <h1>What is NeuroAdaptive Leadership?</h1>
+      <p class="lead">A brain-based approach to leadership that leverages neuroscience and psychology to help leaders adapt with clarity, confidence, and resilience in a world of constant disruption and rapid change.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DEFINITION + PULL QUOTE -->
+<section data-screen-label="Definition">
+  <div class="container" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: start;">
+    <div class="reveal">
+      <span class="eyebrow">In plain language</span>
+      <h2 style="margin-top: 14px;">Upgrade your internal operating system.</h2>
+      <p class="lead">NeuroAdaptive Leadership (NAL) introduces a brain-based approach to leading with greater clarity, confidence, and adaptability — especially under pressure. Many traditional leadership models fall short when leaders face uncertainty, emotional strain, complex decisions, and shifting workplace demands.</p>
+      <p class="lead">NAL shows leaders how to upgrade their internal operating system by improving the way they <strong style="color: var(--navy-deep);">think</strong>, <strong style="color: var(--navy-deep);">regulate emotion</strong>, and <strong style="color: var(--navy-deep);">act with intention</strong> — so they become less reactive, more adaptive, and better equipped to build resilient, high-trust, high-performance cultures.</p>
+    </div>
+    <div class="reveal">
+      <div class="pullquote">
+        <p>"NeuroAdaptive Leadership isn't about managing change. It's about mastering your brain in the midst of it."</p>
+        <cite>
+</cite>
+      </div>
+      <div class="pullquote">
+        <p>"NeuroAdaptive Leadership is the operating system upgrade leaders need for the age of disruption."</p>
+        <cite>
+</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRADITIONAL VS NAL -->
+<section style="background: var(--off-white);" data-screen-label="Traditional vs NAL">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="font-size: 13px">Why a new approach</span>
+      <h2 style="margin-top: 14px;">Traditional leadership was built for stability. The world isn't.</h2>
+      <p class="lead" style="margin: 12px auto 0;">Traditional models often emphasize external strategies — policies, structures, tactics. NeuroAdaptive Leadership emphasizes the internal operating system of the leader: how they think, feel, and respond when the stakes are high.</p>
+    </div>
+
+    <div class="compare reveal">
+      <div class="compare-col trad">
+        <h4>Traditional Leadership</h4>
+        <ul>
+          <li><span class="icon">·</span><span>Designed for stable, predictable environments</span></li>
+          <li><span class="icon">·</span><span>Focuses on external strategies — policy, structure, tactics</span></li>
+          <li><span class="icon">·</span><span>Treats stress as a fact of life to be tolerated</span></li>
+          <li><span class="icon">·</span><span>Reactive to change once it hits</span></li>
+          <li><span class="icon">·</span><span>Leaves the leader's brain out of the equation</span></li>
+        </ul>
+      </div>
+      <div class="compare-col nal">
+        <h4>NeuroAdaptive Leadership</h4>
+        <ul>
+          <li><span class="icon">✓</span><span>Built for volatile, complex, ambiguous environments</span></li>
+          <li><span class="icon">✓</span><span>Upgrades the leader's internal operating system first</span></li>
+          <li><span class="icon">✓</span><span>Teaches active emotional regulation and recovery</span></li>
+          <li><span class="icon">✓</span><span>Anticipates and adapts to disruption signals</span></li>
+          <li><span class="icon">✓</span><span>Trains the brain — clarity, agility, resilience, influence</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- A.D.A.P.T. MODEL -->
+<section data-screen-label="ADAPT Model">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="font-size: 15px">The A.D.A.P.T. Model</span>
+      <h2 style="margin-top: 14px;">Five practices that rewire how you lead.</h2>
+      <p class="lead" style="margin: 12px auto 0;">The A.D.A.P.T. model is the roadmap. Each step trains a different brain system — and together they form the daily practice of a NeuroAdaptive Leader.</p>
+    </div>
+
+    <div class="adapt">
+      <article class="adapt-step reveal">
+        <div class="letter">A<sup></sup></div>
+        <h4>Attune to Disruption</h4>
+        <p>Recognize the signals of change early. Replace denial with awareness — and turn surprise into anticipation.</p>
+      </article>
+      <article class="adapt-step reveal">
+        <div class="letter">D<sup></sup></div>
+        <h4>Decode Thought Patterns</h4>
+        <p>Identify the biases and mental models that limit adaptability. See your thinking, so you can change it.</p>
+      </article>
+      <article class="adapt-step reveal">
+        <div class="letter">A<sup></sup></div>
+        <h4>Align Identity &amp; Intention</h4>
+        <p>Connect your values and goals to adaptive behavior. Lead from who you are, not what you fear.</p>
+      </article>
+      <article class="adapt-step reveal">
+        <div class="letter">P<sup></sup></div>
+        <h4>Program Adaptivity</h4>
+        <p>Rewire the brain through deliberate practice, feedback, and new behaviors. Adaptability is a skill, not a trait.</p>
+      </article>
+      <article class="adapt-step reveal">
+        <div class="letter">T<sup></sup></div>
+        <h4>Transfer through Culture</h4>
+        <p>Embed adaptability into the team and organization through stories, rituals, and recognition.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- THE SCIENCE -->
+<section class="on-dark dot-grid" data-screen-label="The Science">
+  <div class="container" style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: center; position: relative; z-index: 2;">
+    <div class="reveal" style="border-radius: var(--r-xl); overflow: hidden; border: 1px solid rgba(255,255,255,0.08); box-shadow: var(--shadow-card-dark);">
+      <img src="assets/img/brain-hero.png" alt="Neural network brain illustration" />
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">The science</span>
+      <h2 style="margin-top: 14px;">Grounded in neuroplasticity — the brain's ability to rewire itself.</h2>
+      <p class="lead">NAL integrates findings from cognitive flexibility, emotional regulation, and social neuroscience and guides leaders to strengthen their brain networks that drive adaptability.</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px;">
+        <div>
+          <div style="font-size: 28px; font-weight: 800; color: var(--gold); line-height: 1;">Neuroplasticity</div>
+          <p style="color: rgba(255,255,255,0.72); font-size: 14px; margin: 8px 0 0;">The brain rewires itself in response to new experiences. Adaptive leadership can be trained.</p>
+        </div>
+        <div>
+          <div style="font-size: 28px; font-weight: 800; color: var(--gold); line-height: 1;">Executive function</div>
+          <p style="color: rgba(255,255,255,0.72); font-size: 14px; margin: 8px 0 0;">Strengthen the systems that drive clarity, focus, and self-regulation under load.</p>
+        </div>
+      </div>
+      <div class="pullquote" style="margin-top: 36px;">
+        <p>"The human brain is wired to resist change. With intentional practice, leaders can rewire themselves for agility and innovation."</p>
+        <cite>— On Neuroplasticity (Doidge, 2007)</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section data-screen-label="Benefits">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="font-size: 15px">The benefits</span>
+      <h2 style="margin-top: 14px;">Personal change. Organizational change.</h2>
+      <p class="lead" style="margin: 12px auto 0;">NeuroAdaptive Leaders build resilience, clarity, and influence at the personal level — and foster cultures of adaptability where teams feel safe to innovate, collaborate, and grow.</p>
+    </div>
+    <div class="pillar-grid">
+      <div class="pillar reveal">
+        <span class="num">01</span>
+        <h4>Thrive in uncertainty</h4>
+        <p>Lead with steadiness when others can't — without burning out yourself.</p>
+      </div>
+      <div class="pillar reveal">
+        <span class="num">02</span>
+        <h4>Better decisions under pressure</h4>
+        <p>Regulate emotions, expand perspective, and make calls that hold up.</p>
+      </div>
+      <div class="pillar reveal">
+        <span class="num">03</span>
+        <h4>Cultures of adaptability</h4>
+        <p>Build teams where psychological safety, innovation, and adaptability are the default.</p>
+      </div>
+      <div class="pillar reveal">
+        <span class="num">04</span>
+        <h4>Stronger engagement</h4>
+        <p>Adaptive leadership improves engagement, retention, and long-term performance.</p>
+      </div>
+      <div class="pillar reveal">
+        <span class="num">05</span>
+        <h4>Faster recovery</h4>
+        <p>Bounce back from setbacks more quickly — personally and as an organization.</p>
+      </div>
+      <div class="pillar reveal">
+        <span class="num">06</span>
+        <h4>Evolve faster than the pace of disruption</h4>
+        <p>Not just keep up with change — get out in front of it, and help your team do the same.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAILY PRACTICES -->
+<section style="background: var(--off-white);" data-screen-label="Daily Practices">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Daily practice</span>
+      <h2 style="margin-top: 14px;">What a NeuroAdaptive Leader does, every day.</h2>
+      <p class="lead" style="margin: 12px auto 0;">Adaptability is built in the small moments. These are the habits that compound — used by leaders Jason coaches in the field.</p>
+    </div>
+    <div class="habits">
+      <div class="habit reveal">
+        <span class="tag">MORNING</span>
+        <h5>Priming</h5>
+        <p>Visualization and intention-setting before the day starts. Pre-load the brain for the work ahead.</p>
+      </div>
+      <div class="habit reveal">
+        <span class="tag">THROUGHOUT THE DAY</span>
+        <h5>Micro-reflections</h5>
+        <p>Brief pauses to notice and evaluate the thought patterns running in real time.</p>
+      </div>
+      <div class="habit reveal">
+        <span class="tag">DAILY</span>
+        <h5>Learning sprints</h5>
+        <p>15–30 minutes to stretch knowledge in a new domain. Keep the brain flexible by feeding it new patterns.</p>
+      </div>
+      <div class="habit reveal">
+        <span class="tag">EVENING</span>
+        <h5>Adaptive journaling</h5>
+        <p>Record the day's disruptions and reframe them as opportunities for the next move.</p>
+      </div>
+      <div class="habit reveal">
+        <span class="tag">WEEKLY</span>
+        <h5>Cultural nudges</h5>
+        <p>Reinforce adaptive behaviors in conversations and recognition moments. Make adaptability visible.</p>
+      </div>
+      <div class="habit reveal">
+        <span class="tag">ONGOING</span>
+        <h5>Feedback loops</h5>
+        <p>Actively seek feedback that accelerates rewiring — from peers, your team, and trusted advisors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section data-screen-label="FAQ">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="font-size: 15px">Common questions</span>
+      <h2 style="margin-top: 14px;">A few quick answers.</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+      <div class="reveal" style="background: var(--white); border: 1px solid var(--border); border-radius: var(--r-xl); padding: 28px;">
+        <h4 style="font-size: 18px; margin-bottom: 8px;">Can NeuroAdaptive Leadership be learned, or is it innate?</h4>
+        <p style="margin: 0; color: var(--slate-dark); font-size: 15px;">Adaptability isn't fixed. Research shows leaders can intentionally strengthen adaptive skills through training and deliberate practice. Neuroplasticity confirms it: the brain rewires itself based on repeated experience.</p>
+      </div>
+      <div class="reveal" style="background: var(--white); border: 1px solid var(--border); border-radius: var(--r-xl); padding: 28px;">
+        <h4 style="font-size: 18px; margin-bottom: 8px;">How does NAL help leaders avoid burnout?</h4>
+        <p style="margin: 0; color: var(--slate-dark); font-size: 15px;">Stress narrows focus and reduces cognitive flexibility. NAL teaches leaders to regulate emotions, shift perspectives, and maintain clarity under pressure — expanding resilience instead of depleting it.</p>
+      </div>
+      <div class="reveal" style="background: var(--white); border: 1px solid var(--border); border-radius: var(--r-xl); padding: 28px;">
+        <h4 style="font-size: 18px; margin-bottom: 8px;">How does NAL show up at the team level?</h4>
+        <p style="margin: 0; color: var(--slate-dark); font-size: 15px;">Adaptive leaders create psychologically safe environments where teams take risks, share ideas, and innovate. They reinforce adaptability through storytelling, rituals, and recognition — making it a cultural default.</p>
+      </div>
+      <div class="reveal" style="background: var(--white); border: 1px solid var(--border); border-radius: var(--r-xl); padding: 28px;">
+        <h4 style="font-size: 18px; margin-bottom: 8px;">How does NAL prepare leaders for the future of work?</h4>
+        <p style="margin: 0; color: var(--slate-dark); font-size: 15px;">The future workplace will require navigating AI, hybrid teams, and global complexity. NAL builds cognitive agility, emotional resilience, and behavioral adaptability — skills that machines can't replace.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band dot-grid" data-screen-label="What-is CTA">
+  <div class="container" style="position: relative; z-index: 2;">
+    <span class="eyebrow" style="color: var(--gold); font-size: 15px">Ready to upgrade</span>
+    <h2 style="margin: 16px auto;">Start with the book — or the free resources.</h2>
+    <p class="lead">NeuroAdaptive Leadership ships August 25, 2026. Pre-order now and lock in launch-week bonuses, or grab the free workbook and team guide today.</p>
+    <div style="display: inline-flex; gap: 14px; flex-wrap: wrap; justify-content: center;">
+      <a class="btn btn-primary btn-lg" href="index.html#preorder">Pre-order the book <span class="arrow">→</span></a>
+      <a class="btn btn-outline btn-lg" href="resources.html">Get free resources</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="nav-brand" href="index.html">
+          <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg></span>
+          <span><span class="gold-N">N</span>euro<span class="gold-A">A</span>daptive&nbsp;Leadership</span>
+        </a>
+        <p style="max-width: 32ch; margin-top: 12px; color: rgba(255,255,255,0.6); font-size: 14px;">Upgrade your brain to thrive under pressure. A new book by Jason Jones, Ph.D.</p>
+      </div>
+      <div><h5>Learn</h5><ul><li><a href="what-is-neuroadaptive-leadership.html">What is NAL</a></li><li><a href="index.html#preorder">Pre-order book</a></li><li><a href="index.html">Inside the book</a></li></ul></div>
+      <div><h5>Tools</h5><ul><li><a href="resources.html">Free Resources</a></li><li><a href="nli.html">NLI Assessment</a></li><li><a href="missionbuilder.html">MissionBuilder</a></li></ul></div>
+      <div><h5>Stay in touch</h5><ul><li><a href="#">Newsletter</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Speaking inquiries</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Jason Jones, Ph.D. · NeuroAdaptive Leadership</span>
+      <span>neuroadaptiveleadership.com</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
