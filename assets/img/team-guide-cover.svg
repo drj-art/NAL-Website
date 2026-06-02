@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 255" width="340" height="255">
+  <defs>
+    <linearGradient id="coverPanelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A5F"/>
+      <stop offset="100%" style="stop-color:#0A1628"/>
+    </linearGradient>
+    <linearGradient id="innerPanelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF"/>
+      <stop offset="100%" style="stop-color:#F4F7FB"/>
+    </linearGradient>
+    <linearGradient id="midPanelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8FAFC"/>
+      <stop offset="100%" style="stop-color:#EEF2F7"/>
+    </linearGradient>
+    <filter id="pageShadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#0A1628" flood-opacity="0.22"/>
+    </filter>
+    <filter id="coverShadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="-2" dy="3" stdDeviation="5" flood-color="#0A1628" flood-opacity="0.3"/>
+    </filter>
+    <radialGradient id="goldGlow" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" style="stop-color:#F5A623;stop-opacity:0.22"/>
+      <stop offset="100%" style="stop-color:#F5A623;stop-opacity:0"/>
+    </radialGradient>
+    <pattern id="subtleDots" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.9" fill="#F5A623" fill-opacity="0.12"/>
+    </pattern>
+  </defs>
+
+  <!-- ── BACKGROUND ────────────────────────────────────── -->
+  <rect width="340" height="255" fill="#E8EDF4" rx="6"/>
+
+  <!-- ── MIDDLE INNER PAGE (back, slightly visible) ──── -->
+  <rect x="108" y="8" width="130" height="240" rx="3" fill="url(#midPanelGrad)" filter="url(#pageShadow)" opacity="0.5"/>
+
+  <!-- ── RIGHT INNER PANEL (open right flap) ─────────── -->
+  <g filter="url(#pageShadow)">
+    <rect x="174" y="4" width="152" height="247" rx="3" fill="url(#innerPanelGrad)"/>
+    <!-- Top color bar -->
+    <rect x="174" y="4" width="152" height="6" rx="2" fill="#0A1628"/>
+    <!-- Section label -->
+    <rect x="188" y="22" width="60" height="14" rx="7" fill="#0A1628" opacity="0.08"/>
+    <text x="218" y="33" font-family="'Manrope','Arial',sans-serif" font-size="7" font-weight="700" letter-spacing="0.1em" fill="#0A1628" text-anchor="middle" opacity="0.5">DISCUSSION</text>
+
+    <!-- Questions list -->
+    <g font-family="'Manrope','Georgia',serif" fill="#162744">
+      <!-- Q1 -->
+      <rect x="188" y="46" width="5" height="5" rx="1" fill="#F5A623"/>
+      <text x="200" y="53" font-size="7.8" font-weight="700" fill="#0A1628">Where do you feel most reactive</text>
+      <text x="200" y="64" font-size="7.8" font-weight="700" fill="#0A1628">under pressure?</text>
+      <text x="200" y="75" font-size="7" fill="#475569" opacity="0.9">Reflect on patterns, not incidents.</text>
+      <line x1="188" y1="84" x2="312" y2="84" stroke="#CBD5E1" stroke-width="0.8"/>
+
+      <!-- Q2 -->
+      <rect x="188" y="92" width="5" height="5" rx="1" fill="#F5A623"/>
+      <text x="200" y="99" font-size="7.8" font-weight="700" fill="#0A1628">Which of the A.D.A.P.T. steps</text>
+      <text x="200" y="110" font-size="7.8" font-weight="700" fill="#0A1628">feels most urgent for your team?</text>
+      <text x="200" y="121" font-size="7" fill="#475569" opacity="0.9">Prioritize one for the next 30 days.</text>
+      <line x1="188" y1="130" x2="312" y2="130" stroke="#CBD5E1" stroke-width="0.8"/>
+
+      <!-- Q3 -->
+      <rect x="188" y="138" width="5" height="5" rx="1" fill="#F5A623"/>
+      <text x="200" y="145" font-size="7.8" font-weight="700" fill="#0A1628">How do you model adaptability</text>
+      <text x="200" y="156" font-size="7.8" font-weight="700" fill="#0A1628">for the people you lead?</text>
+      <text x="200" y="167" font-size="7" fill="#475569" opacity="0.9">Share a specific example.</text>
+      <line x1="188" y1="176" x2="312" y2="176" stroke="#CBD5E1" stroke-width="0.8"/>
+
+      <!-- Q4 -->
+      <rect x="188" y="184" width="5" height="5" rx="1" fill="#F5A623"/>
+      <text x="200" y="191" font-size="7.8" font-weight="700" fill="#0A1628">What would a high-trust, high-</text>
+      <text x="200" y="202" font-size="7.8" font-weight="700" fill="#0A1628">performance culture feel like here?</text>
+      <text x="200" y="213" font-size="7" fill="#475569" opacity="0.9">Describe it in concrete behaviors.</text>
+    </g>
+
+    <!-- Bottom branding -->
+    <text x="218" y="241" font-family="'Manrope','Arial',sans-serif" font-size="6.5" font-weight="600" letter-spacing="0.08em" fill="#94A3B8" text-anchor="middle">neuroadaptiveleadership.com</text>
+    <!-- Bottom accent line -->
+    <rect x="174" y="247" width="152" height="4" rx="0 0 3 3" fill="#F5A623" opacity="0.7"/>
+  </g>
+
+  <!-- ── LEFT COVER PANEL ──────────────────────────────── -->
+  <g filter="url(#coverShadow)">
+    <rect x="14" y="4" width="162" height="247" rx="3" fill="url(#coverPanelGrad)"/>
+    <!-- Dot texture -->
+    <rect x="14" y="4" width="162" height="247" fill="url(#subtleDots)" rx="3"/>
+    <!-- Gold glow -->
+    <rect x="14" y="4" width="162" height="247" fill="url(#goldGlow)" rx="3"/>
+
+    <!-- Gold top bar -->
+    <rect x="14" y="4" width="162" height="5" rx="2" fill="#F5A623"/>
+
+    <!-- GUIDE badge -->
+    <rect x="28" y="20" width="68" height="18" rx="9" fill="#F5A623" fill-opacity="0.12" stroke="#F5A623" stroke-width="0.8" stroke-opacity="0.55"/>
+    <text x="62" y="32.5" font-family="'Manrope','Arial',sans-serif" font-size="7.5" font-weight="700" letter-spacing="0.14em" fill="#F5A623" text-anchor="middle">TEAM GUIDE</text>
+
+    <!-- Gold rule -->
+    <rect x="28" y="48" width="24" height="2" rx="1" fill="#F5A623"/>
+
+    <!-- Brain icon -->
+    <g transform="translate(88,88) scale(2.5)" fill="none" stroke="#F5A623" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+      <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/>
+      <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/>
+      <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/>
+      <path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/>
+      <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/>
+      <path d="M3.477 10.896a4 4 0 0 1 .585-.396"/>
+      <path d="M19.938 10.5a4 4 0 0 1 .585.396"/>
+      <path d="M6 18a4 4 0 0 1-1.967-.516"/>
+      <path d="M19.967 17.484A4 4 0 0 1 18 18"/>
+    </g>
+    <!-- Glow behind brain -->
+    <circle cx="100" cy="115" r="38" fill="#F5A623" fill-opacity="0.07"/>
+
+    <!-- Title text -->
+    <text x="28" y="185" font-family="'Manrope','Arial Black',sans-serif" font-size="15.5" font-weight="800" letter-spacing="-0.02em" fill="#FFFFFF" text-rendering="geometricPrecision">
+      <tspan>Neuro</tspan><tspan fill="#F5A623">Adaptive</tspan>
+    </text>
+    <text x="28" y="203" font-family="'Manrope','Arial Black',sans-serif" font-size="15.5" font-weight="800" letter-spacing="-0.02em" fill="#FFFFFF" text-rendering="geometricPrecision">Leadership</text>
+    <text x="28" y="220" font-family="'Manrope','Arial',sans-serif" font-size="10" font-weight="500" letter-spacing="0.03em" fill="rgba(255,255,255,0.62)">Team Discussion Guide</text>
+
+    <!-- Author -->
+    <text x="28" y="241" font-family="'Manrope','Arial',sans-serif" font-size="7.5" font-weight="600" letter-spacing="0.08em" fill="rgba(255,255,255,0.42)">JASON JONES, PH.D.</text>
+
+    <!-- Fold shadow on right edge of cover -->
+    <rect x="170" y="4" width="6" height="247" fill="rgba(0,0,0,0.18)" rx="0 3 3 0"/>
+  </g>
+
+  <!-- ── FOLD CREASE (center spine) ───────────────────── -->
+  <line x1="176" y1="4" x2="176" y2="251" stroke="rgba(0,0,0,0.12)" stroke-width="1.5"/>
+</svg>

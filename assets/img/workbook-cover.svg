@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 440" width="340" height="440">
+  <defs>
+    <!-- Navy background gradient -->
+    <linearGradient id="coverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A5F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0A1628;stop-opacity:1" />
+    </linearGradient>
+    <!-- Gold radial glow behind brain -->
+    <radialGradient id="brainGlow" cx="60%" cy="42%" r="38%">
+      <stop offset="0%" style="stop-color:#F5A623;stop-opacity:0.28" />
+      <stop offset="100%" style="stop-color:#F5A623;stop-opacity:0" />
+    </radialGradient>
+    <!-- Subtle dot pattern -->
+    <pattern id="dots" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#F5A623" fill-opacity="0.13"/>
+    </pattern>
+    <!-- Spiral ring clip -->
+    <clipPath id="pageClip">
+      <rect x="36" y="0" width="304" height="440" rx="4"/>
+    </clipPath>
+  </defs>
+
+  <!-- ── SPIRAL BINDING STRIP (left edge) ────────────────── -->
+  <rect x="0" y="0" width="38" height="440" rx="3" fill="#0A1628"/>
+  <rect x="4" y="0" width="30" height="440" fill="#0F1F38"/>
+  <!-- Spiral coils -->
+  <g fill="none" stroke="#F5A623" stroke-width="2.2" stroke-linecap="round">
+    <path d="M22,22 C10,22 10,38 22,38 C34,38 34,54 22,54"/>
+    <path d="M22,54 C10,54 10,70 22,70 C34,70 34,86 22,86"/>
+    <path d="M22,86 C10,86 10,102 22,102 C34,102 34,118 22,118"/>
+    <path d="M22,118 C10,118 10,134 22,134 C34,134 34,150 22,150"/>
+    <path d="M22,150 C10,150 10,166 22,166 C34,166 34,182 22,182"/>
+    <path d="M22,182 C10,182 10,198 22,198 C34,198 34,214 22,214"/>
+    <path d="M22,214 C10,214 10,230 22,230 C34,230 34,246 22,246"/>
+    <path d="M22,246 C10,246 10,262 22,262 C34,262 34,278 22,278"/>
+    <path d="M22,278 C10,278 10,294 22,294 C34,294 34,310 22,310"/>
+    <path d="M22,310 C10,310 10,326 22,326 C34,326 34,342 22,342"/>
+    <path d="M22,342 C10,342 10,358 22,358 C34,358 34,374 22,374"/>
+    <path d="M22,374 C10,374 10,390 22,390 C34,390 34,406 22,406"/>
+    <path d="M22,406 C10,406 10,422 22,422"/>
+  </g>
+  <!-- Hole punch dots on binding -->
+  <circle cx="19" cy="30" r="4" fill="#0A1628" opacity="0.7"/>
+  <circle cx="19" cy="62" r="4" fill="#0A1628" opacity="0.7"/>
+  <circle cx="19" cy="94" r="4" fill="#0A1628" opacity="0.7"/>
+  <circle cx="19" cy="126" r="4" fill="#0A1628" opacity="0.7"/>
+  <circle cx="19" cy="158" r="4" fill="#0A1628" opacity="0.7"/>
+  <circle cx="19" cy="190" r="4" fill="#0A1628" opacity="0.7"/>
+  <circle cx="19" cy="222" r="4" fill="#0A1628" opacity="0.7"/>
+  <circle cx="19" cy="254" r="4" fill="#0A1628" opacity="0.7"/>
+  <circle cx="19" cy="286" r="4" fill="#0A1628" opacity="0.7"/>
+  <circle cx="19" cy="318" r="4" fill="#0A1628" opacity="0.7"/>
+  <circle cx="19" cy="350" r="4" fill="#0A1628" opacity="0.7"/>
+  <circle cx="19" cy="382" r="4" fill="#0A1628" opacity="0.7"/>
+  <circle cx="19" cy="414" r="4" fill="#0A1628" opacity="0.7"/>
+
+  <!-- ── COVER PAGE ──────────────────────────────────────── -->
+  <g clip-path="url(#pageClip)">
+    <!-- Navy cover -->
+    <rect x="36" y="0" width="304" height="440" fill="url(#coverGrad)"/>
+    <!-- Dot grid texture -->
+    <rect x="36" y="0" width="304" height="440" fill="url(#dots)"/>
+    <!-- Gold radial glow -->
+    <rect x="36" y="0" width="304" height="440" fill="url(#brainGlow)"/>
+
+    <!-- ── Ruled lines (workbook feel, lower half) ──────── -->
+    <g stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1">
+      <line x1="50" y1="310" x2="328" y2="310"/>
+      <line x1="50" y1="326" x2="328" y2="326"/>
+      <line x1="50" y1="342" x2="328" y2="342"/>
+      <line x1="50" y1="358" x2="328" y2="358"/>
+      <line x1="50" y1="374" x2="328" y2="374"/>
+      <line x1="50" y1="390" x2="328" y2="390"/>
+      <line x1="50" y1="406" x2="328" y2="406"/>
+      <line x1="50" y1="422" x2="328" y2="422"/>
+    </g>
+    <!-- Left margin rule on lined area -->
+    <line x1="78" y1="302" x2="78" y2="440" stroke="#F5A623" stroke-opacity="0.18" stroke-width="1.2"/>
+
+    <!-- ── Brain SVG (Lucide brain icon, gold) ──────────── -->
+    <g transform="translate(158, 95) scale(3.8)" fill="none" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+      <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/>
+      <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/>
+      <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/>
+      <path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/>
+      <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/>
+      <path d="M3.477 10.896a4 4 0 0 1 .585-.396"/>
+      <path d="M19.938 10.5a4 4 0 0 1 .585.396"/>
+      <path d="M6 18a4 4 0 0 1-1.967-.516"/>
+      <path d="M19.967 17.484A4 4 0 0 1 18 18"/>
+    </g>
+
+    <!-- Gold glow circle behind brain -->
+    <circle cx="228" cy="148" r="52" fill="#F5A623" fill-opacity="0.07"/>
+
+    <!-- ── Gold top accent bar ───────────────────────────── -->
+    <rect x="36" y="0" width="304" height="5" fill="#F5A623"/>
+
+    <!-- ── WORKBOOK badge ────────────────────────────────── -->
+    <rect x="56" y="22" width="84" height="22" rx="11" fill="#F5A623" fill-opacity="0.15" stroke="#F5A623" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="98" y="37" font-family="'Manrope', 'Arial', sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.13em" fill="#F5A623" text-anchor="middle" text-rendering="geometricPrecision">WORKBOOK</text>
+
+    <!-- ── Divider line ──────────────────────────────────── -->
+    <rect x="56" y="54" width="28" height="2" rx="1" fill="#F5A623"/>
+
+    <!-- ── Title block ───────────────────────────────────── -->
+    <text x="56" y="252" font-family="'Manrope', 'Arial Black', sans-serif" font-size="22" font-weight="800" letter-spacing="-0.03em" fill="#FFFFFF" text-rendering="geometricPrecision">
+      <tspan x="56" dy="0">Neuro</tspan><tspan fill="#F5A623">Adaptive</tspan>
+    </text>
+    <text x="56" y="278" font-family="'Manrope', 'Arial Black', sans-serif" font-size="22" font-weight="800" letter-spacing="-0.03em" fill="#FFFFFF" text-rendering="geometricPrecision">Leadership</text>
+
+    <!-- Subtitle -->
+    <text x="56" y="300" font-family="'Manrope', 'Arial', sans-serif" font-size="11.5" font-weight="500" letter-spacing="0.04em" fill="rgba(255,255,255,0.65)" text-rendering="geometricPrecision">Guidebook</text>
+
+    <!-- ── Author line ───────────────────────────────────── -->
+    <text x="56" y="432" font-family="'Manrope', 'Arial', sans-serif" font-size="10" font-weight="600" letter-spacing="0.06em" fill="rgba(255,255,255,0.5)" text-rendering="geometricPrecision">JASON JONES, PH.D.</text>
+  </g>
+
+  <!-- Cover edge shadow -->
+  <rect x="36" y="0" width="2" height="440" fill="rgba(0,0,0,0.25)"/>
+</svg>
