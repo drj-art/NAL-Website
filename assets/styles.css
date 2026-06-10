@@ -1286,7 +1286,7 @@ section.tight { padding: 64px 0; }
    ============================================================ */
 .endorsement-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 .endorsement-card {
@@ -1377,8 +1377,11 @@ section.tight { padding: 64px 0; }
 }
 .endorser-info em { font-style: italic; }
 
-@media (max-width: 960px) {
-  .endorsement-grid { grid-template-columns: 1fr; max-width: 620px; margin: 0 auto; }
+@media (max-width: 1100px) {
+  .endorsement-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .endorsement-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
 }
 
 /* Reveal on scroll */
