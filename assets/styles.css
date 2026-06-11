@@ -1286,9 +1286,16 @@ section.tight { padding: 64px 0; }
    ============================================================ */
 .endorsement-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 24px;
 }
+.endorsement-grid .endorsement-card {
+  grid-column: span 2;
+}
+.endorsement-card--row2-left {
+  grid-column: 2 / span 2;
+}
+/* row2-right auto-places at cols 4–5, centering both cards */
 .endorsement-card {
   display: flex;
   flex-direction: column;
@@ -1379,9 +1386,15 @@ section.tight { padding: 64px 0; }
 
 @media (max-width: 1100px) {
   .endorsement-grid { grid-template-columns: repeat(2, 1fr); }
+  .endorsement-grid .endorsement-card { grid-column: span 1; }
+  .endorsement-card--row2-left,
+  .endorsement-card--row2-right { grid-column: span 1; }
 }
 @media (max-width: 640px) {
   .endorsement-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
+  .endorsement-grid .endorsement-card { grid-column: span 1; }
+  .endorsement-card--row2-left,
+  .endorsement-card--row2-right { grid-column: span 1; }
 }
 
 /* Reveal on scroll */
