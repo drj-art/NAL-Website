@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bulk Book Orders — NeuroAdaptive Leadership | Jason Jones, Ph.D.</title>
+<meta name="description" content="Purchase NeuroAdaptive Leadership in bulk for your organization. Paperback $15/book · Hardcover $23/book. Order 20+ copies and our team will reach out to process payment." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://neuroadaptiveleadership.com/bulk-buyer.html" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+
+<style>
+/* ── Bulk Order Form ───────────────────────────────── */
+.bulk-form { max-width: 780px; margin: 0 auto; }
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.form-group { display: flex; flex-direction: column; gap: 7px; }
+.form-group.full { grid-column: 1 / -1; }
+
+.form-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+}
+
+.form-input {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: var(--r-md);
+  padding: 13px 16px;
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--white);
+  width: 100%;
+  transition: border-color 200ms ease, background 200ms ease;
+  box-sizing: border-box;
+}
+.form-input:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: rgba(255,255,255,0.09);
+}
+.form-input::placeholder { color: rgba(255,255,255,0.28); }
+textarea.form-input { resize: vertical; min-height: 90px; }
+
+/* Book type cards */
+.book-type-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.book-type-card { position: relative; }
+.book-type-card input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.book-type-card label {
+  display: block;
+  padding: 22px 24px;
+  border: 2px solid rgba(255,255,255,0.13);
+  border-radius: var(--r-lg);
+  cursor: pointer;
+  transition: border-color 220ms, background 220ms;
+}
+.book-type-card input:checked + label {
+  border-color: var(--gold);
+  background: rgba(245,166,35,0.07);
+}
+.book-type-card label .btype-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 6px;
+  display: block;
+}
+.book-type-card label .btype-price {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1;
+}
+.book-type-card label .btype-note {
+  display: block;
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+  margin-top: 4px;
+}
+
+/* Order summary */
+.order-summary {
+  background: rgba(245,166,35,0.07);
+  border: 1px solid rgba(245,166,35,0.22);
+  border-radius: var(--r-lg);
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.order-summary-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 4px;
+}
+.order-summary-total {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1;
+}
+.order-summary-note {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  margin-top: 6px;
+}
+
+/* Process steps */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.process-step { display: flex; flex-direction: column; gap: 14px; }
+.step-num {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--r-md);
+  background: var(--gold);
+  color: var(--navy-deep);
+  font-weight: 800;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.process-step h4 { margin: 0; color: var(--navy-deep); }
+.process-step p { margin: 0; font-size: 15px; color: var(--slate-dark); line-height: 1.65; }
+
+.form-divider {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin: 32px 0;
+}
+
+@media (max-width: 680px) {
+  .form-grid { grid-template-columns: 1fr; }
+  .book-type-grid { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container nav">
+    <a class="nav-brand" href="index.html">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg></span>
+      <span><span class="gold-N">N</span>euro<span class="gold-A">A</span>daptive&nbsp;Leadership</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+      <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+    <ul class="nav-links" id="primary-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="what-is-neuroadaptive-leadership.html">What is NAL</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="nli.html">NLI</a></li>
+      <li><a href="missionbuilder.html">MissionBuilder</a></li>
+      <li class="always-show nav-cta"><a class="btn btn-primary btn-sm" href="bulk-buyer.html" aria-current="page">Bulk Orders <span class="arrow">→</span></a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero on-dark dot-grid">
+  <div class="container">
+    <span class="eyebrow" style="font-size: 13px;">Bulk Purchases</span>
+    <h1 style="margin-top: 14px; max-width: 18ch;">Would you like to buy in bulk?</h1>
+    <p class="lead" style="max-width: 52ch;">Purchasing more than 20 copies? Use this form and our team will contact you to complete your order.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="font-size: 13px;">How it works</span>
+      <h2 style="margin-top: 14px;">Three simple steps</h2>
+    </div>
+    <div class="process-steps reveal">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <div>
+          <h4>Complete the form</h4>
+          <p>Fill out your contact information, the quantity you need, and your preferred format. Paperback or hardcover — we'll take care of the rest.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <div>
+          <h4>We contact you for payment</h4>
+          <p>After receiving your request, someone from our team will reach out to collect your payment information and confirm the details of your order.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <div>
+          <h4>Printing &amp; delivery</h4>
+          <p>Once payment is confirmed, your order goes to print. Books will be mailed or shipped directly to you. Please allow four to six weeks for delivery.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="on-dark dot-grid" id="order-form">
+  <div class="container">
+    <div class="section-head reveal" style="text-align: center; margin-bottom: 48px;">
+      <span class="eyebrow" style="font-size: 13px;">Ready to order?</span>
+      <h2 style="margin-top: 14px; color: var(--white);">Submit your bulk order request</h2>
+      <p class="lead" style="color: rgba(255,255,255,0.7); margin: 12px auto 0;">All fields are required. Our team will follow up within 1–2 business days.</p>
+    </div>
+
+    <form class="bulk-form reveal" id="bulkOrderForm" novalidate>
+      <div class="form-grid">
+
+        <!-- Name -->
+        <div class="form-group">
+          <label class="form-label" for="name">Full Name</label>
+          <input class="form-input" type="text" id="name" name="name" placeholder="Jane Smith" required />
+        </div>
+
+        <!-- Organization -->
+        <div class="form-group">
+          <label class="form-label" for="organization">Organization Name</label>
+          <input class="form-input" type="text" id="organization" name="organization" placeholder="Acme Corp" required />
+        </div>
+
+        <!-- Address -->
+        <div class="form-group full">
+          <label class="form-label" for="address">Shipping Address</label>
+          <textarea class="form-input" id="address" name="address" placeholder="Street address, city, state, ZIP" required></textarea>
+        </div>
+
+        <!-- Phone -->
+        <div class="form-group">
+          <label class="form-label" for="phone">Phone Number</label>
+          <input class="form-input" type="tel" id="phone" name="phone" placeholder="(555) 000-0000" required />
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label class="form-label" for="email">Contact Email</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="jane@company.com" required />
+        </div>
+
+        <!-- Quantity -->
+        <div class="form-group">
+          <label class="form-label" for="quantity">Number of Copies <span style="color:rgba(255,255,255,0.35); font-weight:400;">(minimum 20)</span></label>
+          <input class="form-input" type="number" id="quantity" name="quantity" min="20" placeholder="20" required />
+        </div>
+
+        <!-- Spacer -->
+        <div></div>
+
+        <!-- Book Type -->
+        <div class="form-group full">
+          <label class="form-label" style="margin-bottom: 4px;">Book Format</label>
+          <div class="book-type-grid">
+            <div class="book-type-card">
+              <input type="radio" id="paperback" name="bookType" value="paperback" checked />
+              <label for="paperback">
+                <span class="btype-name">Paperback</span>
+                <span class="btype-price">$15</span>
+                <span class="btype-note">per book · bulk rate</span>
+              </label>
+            </div>
+            <div class="book-type-card">
+              <input type="radio" id="hardcover" name="bookType" value="hardcover" />
+              <label for="hardcover">
+                <span class="btype-name">Hardcover</span>
+                <span class="btype-price">$23</span>
+                <span class="btype-note">per book · bulk rate</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="form-group full">
+          <div class="order-summary">
+            <div>
+              <div class="order-summary-label">Estimated Total</div>
+              <div class="order-summary-total" id="estimatedTotal">$300</div>
+              <div class="order-summary-note">Based on 20 paperback copies · payment collected by our team</div>
+            </div>
+            <div style="text-align:right;">
+              <div class="order-summary-label">Per Book</div>
+              <div style="font-size: 22px; font-weight: 800; color: var(--white);" id="pricePerBook">$15</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="form-divider" />
+
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center;">
+        <button class="btn btn-primary btn-lg" type="submit" id="submitBtn">
+          Submit Order Request <span class="arrow">→</span>
+        </button>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.4); margin: 0;">
+          No payment is collected through this form. Our team will reach out to process payment.
+        </p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="nav-brand" href="index.html" style="margin-bottom: 16px;">
+          <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg></span>
+          <span><span class="gold-N">N</span>euro<span class="gold-A">A</span>daptive&nbsp;Leadership</span>
+        </a>
+        <p style="max-width: 32ch; margin-top: 12px; color: rgba(255,255,255,0.6); font-size: 14px;">Upgrade your brain to thrive under pressure. A new book by Jason Jones, Ph.D.</p>
+      </div>
+      <div>
+        <h5>The Book</h5>
+        <ul>
+          <li><a href="index.html#preorder">Pre-order</a></li>
+          <li><a href="bulk-buyer.html">Bulk Orders</a></li>
+          <li><a href="index.html">Read a sample</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Tools</h5>
+        <ul>
+          <li><a href="resources.html">Free Resources</a></li>
+          <li><a href="nli.html">NLI Assessment</a></li>
+          <li><a href="missionbuilder.html">MissionBuilder</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Stay in touch</h5>
+        <ul>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Speaking inquiries</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Jason Jones, Ph.D. · NeuroAdaptive Leadership</span>
+      <span>neuroadaptiveleadership.com</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+<script>
+// ── Live order summary calculator ─────────────────
+const qtyInput   = document.getElementById('quantity');
+const totalEl    = document.getElementById('estimatedTotal');
+const perBookEl  = document.getElementById('pricePerBook');
+const noteEl     = document.querySelector('.order-summary-note');
+const radios     = document.querySelectorAll('input[name="bookType"]');
+
+function updateSummary() {
+  const qty = Math.max(0, parseInt(qtyInput.value) || 0);
+  const type = document.querySelector('input[name="bookType"]:checked').value;
+  const price = type === 'hardcover' ? 23 : 15;
+  const total = qty * price;
+  perBookEl.textContent = '$' + price;
+  totalEl.textContent = qty > 0 ? '$' + total.toLocaleString() : '—';
+  noteEl.textContent = qty > 0
+    ? 'Based on ' + qty + ' ' + type + ' ' + (qty === 1 ? 'copy' : 'copies') + ' · payment collected by our team'
+    : 'Enter a quantity to see your estimate';
+}
+
+qtyInput.addEventListener('input', updateSummary);
+radios.forEach(r => r.addEventListener('change', updateSummary));
+updateSummary();
+
+// ── Form submission ────────────────────────────────
+// SETUP: Replace the URL below with your Google Apps Script Web App URL
+// See google-apps-script/bulk-orders.gs for the script to deploy.
+const APPS_SCRIPT_URL = 'YOUR_APPS_SCRIPT_WEB_APP_URL';
+
+document.getElementById('bulkOrderForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn  = document.getElementById('submitBtn');
+
+  // Basic validation
+  const required = form.querySelectorAll('[required]');
+  let valid = true;
+  required.forEach(field => {
+    if (!field.value.trim()) {
+      field.style.borderColor = '#ef4444';
+      valid = false;
+    } else {
+      field.style.borderColor = '';
+    }
+  });
+  if (!valid) return;
+
+  const qty = parseInt(form.quantity.value);
+  if (qty < 20) {
+    form.quantity.style.borderColor = '#ef4444';
+    form.quantity.focus();
+    return;
+  }
+
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  // Send to Google Apps Script (fire-and-forget — redirect happens regardless)
+  const formData = new FormData(form);
+  if (APPS_SCRIPT_URL !== 'YOUR_APPS_SCRIPT_WEB_APP_URL') {
+    fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: formData }).catch(() => {});
+  }
+
+  // Redirect to thank-you page
+  setTimeout(() => { window.location.href = 'thank-you.html'; }, 900);
+});
+</script>
+
+</body>
+</html>
