@@ -400,7 +400,6 @@ function updateSummary() {
     ? 'Based on ' + qty + ' ' + type + ' ' + (qty === 1 ? 'copy' : 'copies') + ' · payment collected by our team'
     : 'Enter a quantity to see your estimate';
 }
-
 qtyInput.addEventListener('input', updateSummary);
 radios.forEach(r => r.addEventListener('change', updateSummary));
 updateSummary();
@@ -408,7 +407,7 @@ updateSummary();
 // ── Form submission ────────────────────────────────
 // SETUP: Replace the URL below with your Google Apps Script Web App URL
 // See google-apps-script/bulk-orders.gs for the script to deploy.
-const APPS_SCRIPT_URL = 'YOUR_APPS_SCRIPT_WEB_APP_URL';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyR9NN99ftqEXhCg4zxYyy6R7vC-HFbVdI7hIvIRVokY6BCRfIuRVInnVKs5ANAN-Yt/exec';
 
 document.getElementById('bulkOrderForm').addEventListener('submit', function(e) {
   e.preventDefault();
