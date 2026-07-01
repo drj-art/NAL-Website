@@ -439,9 +439,11 @@ document.getElementById('bulkOrderForm').addEventListener('submit', function(e) 
   btn.disabled = true;
 
   // Send to Google Apps Script (fire-and-forget — redirect happens regardless)
-  const formData = new FormData(form);
+  // URLSearchParams sends as application/x-www-form-urlencoded,
+  // which Google Apps Script parses into e.parameter correctly.
+  const params = new URLSearchParams(new FormData(form));
   if (APPS_SCRIPT_URL !== 'YOUR_APPS_SCRIPT_WEB_APP_URL') {
-    fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: formData }).catch(() => {});
+    fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: params }).catch(() => {});
   }
 
   // Redirect to thank-you page

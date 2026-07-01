@@ -21,6 +21,11 @@ const THANK_YOU_URL = 'https://neuroadaptiveleadership.com/thank-you.html';
 
 function doPost(e) {
   try {
+    // Guard against being called without an event (e.g. Run from editor)
+    if (!e || !e.parameter) {
+      Logger.log('doPost called without event data — use the deployed Web App URL, not Run.');
+      return HtmlService.createHtmlOutput('<p>No data received.</p>');
+    }
     const p = e.parameter;
 
     const name         = p.name         || '';
