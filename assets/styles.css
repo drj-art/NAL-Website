@@ -610,7 +610,10 @@ section.tight { padding: 64px 0; }
 .pillar--row2-left {
   grid-column: 2 / span 2;
 }
-/* pillar--row2-right auto-places at cols 4–5, centering both */
+.pillar--row2-right {
+  grid-column: 4 / span 2;
+}
+/* row2-left at 2–3 and row2-right at 4–5 leaves col 1 and 6 empty → centered */
 .pillar {
   background: var(--white);
   border: 1px solid var(--border);
