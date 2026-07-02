@@ -607,13 +607,12 @@ section.tight { padding: 64px 0; }
 .pillar-grid .pillar {
   grid-column: span 2;
 }
-.pillar--row2-left {
+.pillar-grid .pillar--row2-left {
   grid-column: 2 / span 2;
 }
-.pillar--row2-right {
+.pillar-grid .pillar--row2-right {
   grid-column: 4 / span 2;
 }
-/* row2-left at 2–3 and row2-right at 4–5 leaves col 1 and 6 empty → centered */
 .pillar {
   background: var(--white);
   border: 1px solid var(--border);
@@ -645,8 +644,8 @@ section.tight { padding: 64px 0; }
 @media (max-width: 860px) {
   .pillar-grid { grid-template-columns: 1fr; }
   .pillar-grid .pillar,
-  .pillar--row2-left,
-  .pillar--row2-right { grid-column: span 1; }
+  .pillar-grid .pillar--row2-left,
+  .pillar-grid .pillar--row2-right { grid-column: span 1; }
 }
 
 /* ============================================================
