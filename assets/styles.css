@@ -504,7 +504,7 @@ section.tight { padding: 64px 0; }
   align-items: center;
 }
 .hero-art img.book {
-  max-height: 640px;
+  max-height: 832px;
   width: auto;
   filter: drop-shadow(0 40px 60px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 40px rgba(245, 166, 35, 0.18));
   transition: transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
