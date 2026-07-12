@@ -297,6 +297,17 @@ section.tight { padding: 64px 0; }
   height: 28px;
   display: block;
 }
+.nav-brand,
+.nav-brand .mark {
+  transition: color 0.2s ease, filter 0.2s ease;
+}
+.nav-brand:hover {
+  color: var(--gold-light);
+}
+.nav-brand:hover .mark {
+  color: var(--gold-light);
+  filter: drop-shadow(0 0 10px rgba(251, 191, 69, 0.6));
+}
 .nav-links {
   display: flex;
   align-items: center;
