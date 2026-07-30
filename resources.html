@@ -262,6 +262,15 @@
   if (window.location.hash === '#bundle') {
     var optinBlock = document.getElementById('optin');
     if (optinBlock) optinBlock.style.display = 'none';
+
+    document.querySelectorAll('[data-unlocked-href]').forEach(function(btn) {
+      var arrow = btn.querySelector('.arrow');
+      btn.setAttribute('href', btn.getAttribute('data-unlocked-href'));
+      btn.setAttribute('target', '_blank');
+      btn.setAttribute('rel', 'noopener');
+      btn.textContent = btn.getAttribute('data-unlocked-text') + ' ';
+      if (arrow) btn.appendChild(arrow);
+    });
   }
 </script>
 
@@ -285,7 +294,7 @@
           <h3>Apply every chapter to your real work.</h3>
           <p>A guided workbook that walks you through the book's core frameworks with reflection prompts, self-assessments, and structured exercises. Designed to be opened next to the book, or used on its own.</p>
           <div style="display: flex; gap: 12px; margin-top: 20px;">
-            <a class="btn btn-primary" href="assets/downloads/nal-workbook.pdf" target="_blank" rel="noopener">Download the workbook <span class="arrow">→</span></a>
+            <a class="btn btn-primary" href="#optin" data-unlocked-href="assets/downloads/nal-workbook.pdf" data-unlocked-text="Download the workbook">Unlock to download <span class="arrow">→</span></a>
           </div>
         </div>
       </article>
@@ -305,7 +314,7 @@
             <li>Group-norming language and facilitation cues</li>
           </ul>
           <div style="display: flex; gap: 12px; margin-top: 20px;">
-            <a class="btn btn-primary" href="assets/downloads/nal-team-discussion-guide.pdf" target="_blank" rel="noopener">Download the discussion guide <span class="arrow">→</span></a>
+            <a class="btn btn-primary" href="#optin" data-unlocked-href="assets/downloads/nal-team-discussion-guide.pdf" data-unlocked-text="Download the discussion guide">Unlock to download <span class="arrow">→</span></a>
           </div>
         </div>
       </article>
@@ -320,7 +329,7 @@
           <h3>Exact language for the moments that matter.</h3>
           <p>Sixteen field-tested scripts you can adapt and deliver, from announcing a change to running a pressure check-in. Written in plain language, grounded in the science.</p>
           <div style="display: flex; gap: 12px; margin-top: 20px;">
-            <a class="btn btn-primary" href="assets/downloads/pressure-to-performance-scripts.pdf" target="_blank" rel="noopener">Download the scripts <span class="arrow">→</span></a>
+            <a class="btn btn-primary" href="#optin" data-unlocked-href="assets/downloads/pressure-to-performance-scripts.pdf" data-unlocked-text="Download the scripts">Unlock to download <span class="arrow">→</span></a>
           </div>
         </div>
       </article>
