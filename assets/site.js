@@ -29,26 +29,6 @@
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // Resources opt-in form
-  const form = document.querySelector('.optin-form');
-  if (form) {
-    form.addEventListener('submit', (ev) => {
-      ev.preventDefault();
-      const optin = form.closest('.optin');
-      const success = document.querySelector('.optin-success');
-      if (optin && success) {
-        const name = form.querySelector('input[name="firstName"]').value || 'Friend';
-        const nameSlot = success.querySelector('[data-name]');
-        if (nameSlot) nameSlot.textContent = name;
-        optin.style.display = 'none';
-        success.classList.add('show');
-        // Reveal locked resources
-        document.querySelectorAll('.lock-resource').forEach(el => el.classList.add('unlocked'));
-        window.scrollTo({ top: success.offsetTop - 120, behavior: 'smooth' });
-      }
-    });
-  }
-
   // MissionBuilder demo: cycle "active" step
   const steps = document.querySelectorAll('.mb-step');
   if (steps.length) {
