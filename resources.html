@@ -262,16 +262,20 @@
   if (window.location.hash === '#bundle') {
     var optinBlock = document.getElementById('optin');
     if (optinBlock) optinBlock.style.display = 'none';
-
-    document.querySelectorAll('[data-unlocked-href]').forEach(function(btn) {
-      var arrow = btn.querySelector('.arrow');
-      btn.setAttribute('href', btn.getAttribute('data-unlocked-href'));
-      btn.setAttribute('target', '_blank');
-      btn.setAttribute('rel', 'noopener');
-      btn.textContent = btn.getAttribute('data-unlocked-text') + ' ';
-      if (arrow) btn.appendChild(arrow);
-    });
   }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.hash === '#bundle') {
+      document.querySelectorAll('[data-unlocked-href]').forEach(function(btn) {
+        var arrow = btn.querySelector('.arrow');
+        btn.setAttribute('href', btn.getAttribute('data-unlocked-href'));
+        btn.setAttribute('target', '_blank');
+        btn.setAttribute('rel', 'noopener');
+        btn.textContent = btn.getAttribute('data-unlocked-text') + ' ';
+        if (arrow) btn.appendChild(arrow);
+      });
+    }
+  });
 </script>
 
 <!-- RESOURCE DETAIL LIST -->
