@@ -258,6 +258,12 @@
     </div>
   </div>
 </div>
+<script>
+  if (window.location.hash === '#bundle') {
+    var optinBlock = document.getElementById('optin');
+    if (optinBlock) optinBlock.style.display = 'none';
+  }
+</script>
 
 <!-- RESOURCE DETAIL LIST -->
 <section id="bundle" data-screen-label="Resource Bundle">
