@@ -1,6 +1,6 @@
 # NeuroAdaptive Leadership
 
-> NeuroAdaptive Leadership is a book and leadership development framework by Jason Jones, Ph.D. that applies neuroscience to help leaders think clearly, regulate emotion, and act with intention under pressure. Releasing August 25, 2026.
+> NeuroAdaptive Leadership is a book and leadership development framework by Jason Jones, Ph.D. that applies neuroscience to help leaders think clearly, regulate emotion, and act with intention under pressure. Available now.
 
 ## About the Book
 
@@ -8,7 +8,7 @@ NeuroAdaptive Leadership introduces a brain-based approach to leading with great
 
 Drawing from neuroscience, psychology, and practical leadership experience, NeuroAdaptive Leadership offers a clear framework for helping leaders become less reactive, more adaptive, and better equipped to build resilient, high-trust, high-performance cultures.
 
-**Release date:** August 25, 2026
+**Published:** August 25, 2026
 **Formats:** Hardcover, Paperback, Audiobook, eBook
 **Website:** https://neuroadaptiveleadership.com/
 
@@ -52,7 +52,7 @@ Jason Jones, Ph.D. has spent more than 25 years helping leaders perform under pr
 
 ## Site Pages
 
-- Home / Pre-order: https://neuroadaptiveleadership.com/
+- Home / Order: https://neuroadaptiveleadership.com/
 - What is NeuroAdaptive Leadership: https://neuroadaptiveleadership.com/what-is-neuroadaptive-leadership.html
 - NLI Assessment: https://neuroadaptiveleadership.com/nli.html
 - MissionBuilder Tool: https://neuroadaptiveleadership.com/missionbuilder.html
