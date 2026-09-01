@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/nli",
+      "destination": "https://drjasonjones.com/nli/",
+      "permanent": false
+    },
+    {
+      "source": "/NLI",
+      "destination": "https://drjasonjones.com/nli/",
+      "permanent": false
+    }
+  ]
+}
